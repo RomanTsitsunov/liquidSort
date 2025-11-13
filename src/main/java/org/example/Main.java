@@ -34,6 +34,12 @@ public class Main {
             bottles[i] = new Bottle(v);
         }
 
+        System.out.println("Initial state:");
+        for (Bottle bottle : bottles) {
+            System.out.println(bottle);
+        }
+        System.out.println();
+
         List<Step> steps = new ArrayList<>();
         boolean isSolved = SortWorker.sort(bottles, steps);
         SortWorker.printResult(isSolved, bottles, steps);
